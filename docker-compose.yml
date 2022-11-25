@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  build: .
+  command: python -u app.py
+  ports:
+    - "5000:5000"
+  volumes:
+    - .:/app
+  links:
+    - mongo
+  
+mongo:
+    image: mongo:4.2
+    hostname: mongo
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: sume
+      MONGO_INITDB_ROOT_PASSWORD: sume
+      MONGO_INITDB_DATABASE: sume
