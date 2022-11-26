@@ -5,6 +5,7 @@ Sistema voltado a buscar previsões do tempo
 <p align="center">
   <img width="340" height="160" src="https://entrecontos.files.wordpress.com/2019/02/aarvore.png">
 </p>
+
 ## Pré-requisitos
 - Python Python 3.10.8
 - Flask 2.1.3
@@ -47,4 +48,4 @@ rodar aplicação:
 ```sh
  python src/app.py
 ```
-### Instalar dependências de sistema
+<!-- ### Instalar dependências de sistema -->
