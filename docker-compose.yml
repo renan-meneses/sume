@@ -1,16 +1,17 @@
-version: '3'
+version: '1'
 
 services:
-  build: .
-  command: python -u app.py
-  ports:
-    - "5000:5000"
-  volumes:
-    - .:/app
-  links:
-    - mongo
-  
-mongo:
+  weather:
+    build: ./src
+    command: python -u app.py
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./src:/app
+    links:
+      - mongo
+
+  mongo:
     image: mongo:4.2
     hostname: mongo
     ports:

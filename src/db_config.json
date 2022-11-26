@@ -1,8 +1,8 @@
 {
     "db": {
-             "url" : "mongodb://localhost:27017/",
-             "name" :"db_name",  
-             "user" :"",
-             "password" :""
-     }
-  }
+            "url" : "mongodb://localhost:27017/",
+            "name" :"sume",
+            "user" :"sume",
+            "password" :"sume"
+    }
+}
