@@ -20,23 +20,24 @@ class Weather(object):
             "updated": "datetime",
         }
 
-        self.create_required_fields = ["city","temp","temp_min","temp_min","dt","description","created","updated"]
+        self.create_required_fields = ["city","temp","temp_min","temp_max","dt","description"]
 
         # Fields optional for CREATE
         self.create_optional_fields = []
 
         # Fields required for UPDATE
-        self.update_required_fields = ["city","temp","temp_min","temp_min","dt","description","created","updated"]
+        self.update_required_fields = ["city","temp","temp_min","temp_max","dt","description"]
 
         # Fields optional for UPDATE
         self.update_optional_fields = []
 
+    
     def create(self, weather):
         # Validator will throw error if invalid
         self.validator.validate(weather, self.fields, self.create_required_fields, self.create_optional_fields)
-        res = self.db.insert(weather, self.collection_name)
-        return "Inserted Id " + res
-
+        return self.db.insert(weather, self.collection_name)
+         
+    
     def find(self, weather):  # find all
         return self.db.find(weather, self.collection_name)
 

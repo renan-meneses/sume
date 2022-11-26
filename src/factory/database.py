@@ -1,7 +1,7 @@
 from datetime import datetime
 from pymongo import MongoClient
 from bson import ObjectId
-
+import json
 from config import config
 
 
@@ -9,12 +9,13 @@ class Database(object):
     def __init__(self):
             self.client = MongoClient(config['db']['url'])  # configure db url
             self.db = self.client[config['db']['name']]  # configure db name
+    
 
     def insert(self, element, collection_name):
         element["created"] = datetime.now()
         element["updated"] = datetime.now()
-        inserted = self.db[collection_name].insert(element)  # insert data to db
-        return str(inserted.inserted_id)
+        inserted = self.db[collection_name].insert_one(element)
+        return str(inserted['inserted_id'])
 
     def find(self, criteria, collection_name, projection=None, sort=None, limit=0, cursor=False):  # find all from db
 
