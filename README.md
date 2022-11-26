@@ -9,4 +9,39 @@ Sistema voltado a buscar previsões do tempo
 
 ## Montagem do ambiente de desenvolvimento
 
+### Amebiente Docker 
+
+    ```sh
+docker-compose up -p
+```
+
+### Ambiente Local
+
+Criar banco mongo(caso nao tenhao instalado na maquina):
+
+   ```sh
+docker-compose up -p mongo
+```
+
+Criar env: 
+```sh
+python3.10 -m venv venv
+```
+
+Acessar:
+
+```sh
+source venv/bin/activate
+```
+intalar a dependencias:
+
+```sh
+pip install --upgrade pip && pip install -r src/requirements.txt
+```
+
+rodar aplicação:
+
+```sh
+ python src/app.py
+```
 ### Instalar dependências de sistema

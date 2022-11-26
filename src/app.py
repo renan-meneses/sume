@@ -1,21 +1,17 @@
-from flask import Flask, request, jsonify, Blueprint
+from flask import Flask, request
 from flask_cors import CORS
 from flasgger import Swagger
 from service.weather import Weather
 from service.home import Home
 
-
 app = Flask(__name__)
 swagger = Swagger(app)
-blueprint = Blueprint('api', __name__)
-app.register_blueprint(blueprint)
 CORS(app)
 
 # weather routes
 @app.route('/', methods=['GET'])
 def home():
        return Home.home()
-
 
 @app.route('/weather/', methods=['GET'])
 def weather_forecast():
