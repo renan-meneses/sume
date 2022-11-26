@@ -1,6 +1,6 @@
 {
     "db": {
-            "url" : "mongodb://localhost:27017/",
+            "url" : "mongodb://sume:sume@localhost:27017/?authMechanism=DEFAULT",
             "name" :"sume",
             "user" :"sume",
             "password" :"sume"

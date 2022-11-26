@@ -49,3 +49,7 @@ rodar aplicação:
  python src/app.py
 ```
 <!-- ### Instalar dependências de sistema -->
+
+### Postmam
+
+[Link do Collection.](https://www.getpostman.com/collections/7fc23d7d3cd69a8cd318)
