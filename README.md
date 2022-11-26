@@ -13,9 +13,9 @@ Sistema voltado a buscar previsões do tempo
 
 ## Montagem do ambiente de desenvolvimento
 
-### Amebiente Docker 
+### Ambiente Docker 
 
-    ```sh
+```sh
 docker-compose up -p
 ```
 
@@ -23,7 +23,7 @@ docker-compose up -p
 
 Criar banco mongo(caso nao tenhao instalado na maquina):
 
-   ```sh
+```sh
 docker-compose up -p mongo
 ```
 
